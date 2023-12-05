@@ -3,7 +3,6 @@ const fs = require('fs');
 const input = fs.readFileSync('day3.txt', 'utf8').trimEnd();
 const visitedSanta = new Set(['0-0']);
 let test = input.match(/.{1,2}/g).map(x => x.split(''))
-let x = 0, y = 0;
 console.log(test)
 
 const toDir = {
@@ -28,7 +27,3 @@ function solve2(input) {
   console.log(houses.size);
 }
 solve2(input);
-
-
-// console.log(visited.values());
-
