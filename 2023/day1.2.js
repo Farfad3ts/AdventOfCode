@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const result = fs.readFileSync("day1.txt", "utf-8").split("\r\n").map( v => {
-    let words = [ 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    let words = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     for (let i in words)
         v = v.replaceAll(words[i], `${words[i]}${Number(i)+1}${words[i]}`);
     let digits = v.match(/\d/g );
