@@ -1,6 +1,6 @@
-let path = "day1.txt"
+import * as fs from "fs"
 
-let result = require("fs").readFileSync(path, "utf-8");
+let result = fs.readFileSync("input/day1.txt", "utf-8");
 let acc = 0;
 let basementIndex = -1;
 for (let i = 0; i < result.length; i++) {
