@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "typescript": "^6.0.0-beta"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "node dist/1_1.js"
+  }
+}
