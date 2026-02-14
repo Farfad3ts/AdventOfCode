@@ -4,10 +4,14 @@
 #include <string.h>
 
 char **split_char(char *str, char delimiter) {
-    if (!str) return NULL;
+    if (!str) {
+        return NULL;
+    }
     int count = count_occurrence(str, delimiter);
     char **result = malloc((count + 2) * sizeof(char*));
-    if (!result) return NULL;
+    if (!result) {
+        return NULL;
+    }
     char delims[2] = { delimiter, '\0' };
     int index = 0;
     char *token = strtok(str, delims);
