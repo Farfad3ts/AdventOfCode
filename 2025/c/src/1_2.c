@@ -22,7 +22,7 @@ static int hits_to_zero(int p, char dir, long d) {
 }
 
 int main() {
-    char *path = "input/1.txt";
+    char *path = "../input/1.txt";
     char *file_content = read_file_to_string(path);
     char **split_result = split_char(file_content, '\n');
     int counter = 50;
