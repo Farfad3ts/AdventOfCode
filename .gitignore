@@ -1,0 +1,31 @@
+node_modules
+dist
+tsconfig.tsbuildinfo
+logs
+*.log
+npm-debug.log*
+lcov.info
+.nyc_output
+coverage
+.grunt
+.nyc_output
+coverage
+.grunt
+.idea
+.vscode
+build
+*.js        # Ignore compiled JS files in the root
+*.js.map   # Ignore source maps in the root
+typings
+.npm
+.pnp
+.pnp.js
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.cache
+.next      # Next.js
+.nuxt      # Nuxt.js
+out
