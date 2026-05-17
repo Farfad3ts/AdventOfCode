@@ -5,23 +5,22 @@ const input = fs
     .trim()
     .split(/\r?\n/)
     .map(x => x.replaceAll('.', '0').replaceAll('@', '1').split('').map(Number));
-let goodFlask = 0;
+let accessibleRolls = 0;
 
 for (let i = 0; i < input.length; i++) {
     for (let j = 0; j < input[i].length; j++) {
         if (input[i][j] !== 1) {
-            continue
-        };
+            continue;
+        }
         const neighbors = [
             input[i - 1]?.[j - 1], input[i - 1]?.[j], input[i - 1]?.[j + 1], input[i]?.[j - 1], input[i]?.[j + 1],
             input[i + 1]?.[j - 1], input[i + 1]?.[j], input[i + 1]?.[j + 1]
         ];
-        const adjacentFlasks = neighbors.filter(n => n === 1).length;
-        if (adjacentFlasks < 4) {
-            goodFlask++;
+        const adjacentRolls = neighbors.filter(n => n === 1).length;
+        if (adjacentRolls < 4) {
+            accessibleRolls++;
         }
     }
 }
 
-console.table(input);
-console.log("Good flasks:", goodFlask);
+console.log("Accessible rolls of paper:", accessibleRolls);
